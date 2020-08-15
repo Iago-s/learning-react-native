@@ -9,10 +9,12 @@ const Stack = createStackNavigator();
 import Login from './pages/Login';
 import Register from './pages/Register';
 
+import Profile from './pages/Profile';
+
 const Routes = () => {
   return(
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName="Login">
         <Stack.Screen 
           name="Login"
           component={Login}
@@ -25,6 +27,13 @@ const Routes = () => {
           component={Register}
           options={{
             title: 'Pagina de cadastro.'
+          }}
+        />
+        <Stack.Screen 
+          name="Profile"
+          component={Profile}
+          options={{
+            title: 'Pagina de perfil'
           }}
         />
       </Stack.Navigator>

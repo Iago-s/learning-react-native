@@ -21,7 +21,7 @@ const Login = ({ navigation }) => {
 
         <TouchableOpacity style={styles.registerLink}
           onPress={() => { 
-            navigation.navigate('Register', { name: 'Register' })
+            navigation.navigate('Register', { name: 'Iago Silva Oliveira' })
           }}
         >
           <Text style={styles.registerLinkText}>Criar conta</Text>
