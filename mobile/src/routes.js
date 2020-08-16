@@ -9,7 +9,8 @@ const Stack = createStackNavigator();
 import Login from './pages/Login';
 import Register from './pages/Register';
 
-import Profile from './pages/Profile';
+import StocksPortfolios from './pages/StocksPortfolios';
+import Portfolio from './pages/Portfolio'
 
 const Routes = () => {
   return(
@@ -19,21 +20,28 @@ const Routes = () => {
           name="Login"
           component={Login}
           options={{
-            title: 'Pagina de login.'
+            title: 'Fazer login.'
           }}
         />
         <Stack.Screen 
           name="Register"
           component={Register}
           options={{
-            title: 'Pagina de cadastro.'
+            title: 'Criar conta.'
           }}
         />
         <Stack.Screen 
-          name="Profile"
-          component={Profile}
+          name="StocksPortfolios"
+          component={StocksPortfolios}
           options={{
-            title: 'Pagina de perfil'
+            title: 'Carteiras de ações.'
+          }}
+        />
+        <Stack.Screen 
+          name="Portfolio"
+          component={Portfolio}
+          options={{
+            title: 'Acompanhe sua carteira de investimenstos.'
           }}
         />
       </Stack.Navigator>

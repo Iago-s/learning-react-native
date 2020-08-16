@@ -1,32 +1,41 @@
 import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, } from 'react-native';
 
 import styles from './styles';
 
 import Logo from '../../components/Logo';
 import Input from '../../components/Input';
 import LoginButton from '../../components/LoginButton';
+import RegisterButton from '../../components/BackLink';
 
-const Login = ({ navigation }) => {
+const Login = ({ route, navigation }) => {
   return (
     <View style={styles.container}>
       <Logo />
 
       <View style={styles.inputContainer}>
 
-        <Input placeholder="E-mail" textContentType="emailAddress" />
-        <Input placeholder="Password" textContentType="password" />
+        <Input 
+          placeholder="E-mail" 
+          textContentType="emailAddress" 
+          autoCapitalize="none"
+          autoCompleteType="off"
+          autoCorrect={false}
+        />
+        <Input 
+          placeholder="Senha" 
+          textContentType="password" 
+          autoCapitalize="none"
+          autoCompleteType="off"
+          autoCorrect={false}
+        />
 
-        <LoginButton text="Login" />
+        <LoginButton text="Login" onPress={() => navigation.navigate('StocksPortfolios')}/>
 
-        <TouchableOpacity style={styles.registerLink}
-          onPress={() => { 
-            navigation.navigate('Register', { name: 'Iago Silva Oliveira' })
-          }}
-        >
-          <Text style={styles.registerLinkText}>Criar conta</Text>
-        </TouchableOpacity>
-
+        <RegisterButton 
+          text="Criar conta"
+          onPress={() => navigation.navigate('Register')}
+        />
       </View>
 
     </View>

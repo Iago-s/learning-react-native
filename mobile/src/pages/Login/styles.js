@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
 
-    backgroundColor: '#B9C7D2',
+    backgroundColor: 'black',
 
     justifyContent: 'center',
     alignItems: 'center'
@@ -12,24 +12,9 @@ const styles = StyleSheet.create({
 
   inputContainer: {
     width: '80%',
-    borderRadius: 4,
-    
-    borderColor: '#f5f5f5',
-  },
 
-  registerLink: {
-    alignItems: 'flex-end',
-    marginTop: 5,
+    borderColor: '#272727',
   },
-  
-  registerLinkText: {
-    fontSize: 17,
-    fontWeight: 'bold',
-    color: '#f5f5f5',
-    
-    paddingRight: 10,
-    paddingLeft: 10,
-  }
 });
 
 export default styles;

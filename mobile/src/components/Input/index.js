@@ -6,7 +6,15 @@ const Input = (props) => {
     <TextInput 
       style={styles.inputText}
       placeholder={props.placeholder}
-      placeholderTextColor="#B9C7D2"
+      placeholderTextColor="#F5F5F5"
+      
+      autoCapitalize={props.autoCapitalize}
+      autoCompleteType={props.autoCompleteType}
+      autoCorrect={props.autoCorrect}
+
+      value={props.value}
+      onChangeText={props.onChangeText}
+      
     />
   );
 };
@@ -15,11 +23,11 @@ const styles = StyleSheet.create({
   inputText: {
     textAlign: 'center',
     fontSize: 20,
-    color: 'black',
+    color: '#F5F5F5',
 
     height: 50,
 
-    backgroundColor: '#F5F5F5',
+    backgroundColor: '#272727',
 
     textDecorationLine: 'underline',
     
@@ -27,7 +35,7 @@ const styles = StyleSheet.create({
     padding: 10,
 
     borderWidth: 1,
-    borderColor: '#F5F5F5',
+    borderColor: '#272727',
     borderRadius: 8,
   },
 });
