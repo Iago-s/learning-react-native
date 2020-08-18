@@ -15,33 +15,37 @@ import Portfolio from './pages/Portfolio'
 const Routes = () => {
   return(
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Login">
+      <Stack.Navigator 
+        mode="modal"
+        headerMode="none"
+        initialRouteName="Login"
+      >
         <Stack.Screen 
           name="Login"
           component={Login}
           options={{
-            title: 'Fazer login.'
+            title: 'Fazer login',
           }}
         />
         <Stack.Screen 
           name="Register"
           component={Register}
           options={{
-            title: 'Criar conta.'
+            title: 'Criar conta',
           }}
         />
         <Stack.Screen 
           name="StocksPortfolios"
           component={StocksPortfolios}
           options={{
-            title: 'Carteiras de ações.'
+            title: 'Carteiras de ações',
           }}
         />
         <Stack.Screen 
           name="Portfolio"
           component={Portfolio}
           options={{
-            title: 'Acompanhe sua carteira de investimenstos.'
+            title: 'Acompanhe seus investimentos',
           }}
         />
       </Stack.Navigator>
