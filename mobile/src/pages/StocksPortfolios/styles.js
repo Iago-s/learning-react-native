@@ -4,10 +4,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
 
-    backgroundColor: 'black',
-
     justifyContent: 'flex-start',
     alignItems: 'center',
+
+    backgroundColor: 'black',
   },
 
   textContainer: {
@@ -29,51 +29,54 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 20,
     fontWeight: 'bold',
+    color: '#F5F5F5',
 
     padding: 10,
-    color: '#F5F5F5',
   },
 
   portfoliosContainer: {
-    width: '80%',
-
-
     flex: 1,
+    
+    width: '80%',
   },
 
   button: {
+    marginBottom: 10,
+
     justifyContent: 'flex-start',
     alignItems: 'center',
 
-    marginBottom: 10,
+    flexDirection: 'row',
 
     backgroundColor: '#272727',
 
     borderWidth: 1,
     borderColor: '#272727',
     borderRadius: 8,
-
-    flexDirection: 'row',
   },
 
   logo: {
     width: 30,
     height: 30,
+    
     margin: 10
   },
 
   textButton: {
-    color: '#F5F5F5',
     fontSize: 18,
-
+    color: '#F5F5F5',
+    
     padding: 10,
   },
 
   buttonAdd: {
     width: '80%',
+    
     justifyContent: 'center',
     alignItems: 'flex-end',
+    
     backgroundColor: 'black',
+    
     marginBottom: 30,
   },
 
@@ -81,9 +84,7 @@ const styles = StyleSheet.create({
     width: 70,
     height: 70,
     margin: 10,
-
   },
-  
 });
 
 export default styles;

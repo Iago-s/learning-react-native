@@ -18,7 +18,6 @@ const Routes = () => {
       <Stack.Navigator 
         mode="modal"
         headerMode="none"
-        initialRouteName="Login"
       >
         <Stack.Screen 
           name="Login"
