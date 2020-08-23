@@ -18,13 +18,15 @@ const Portfolio = ({ navigation }) => {
 
   useEffect(() => {
     setPatrimony(eval(`${cash} + ${patrimonyHere}`) + '');
+  }, [cash, patrimonyHere]);
 
-    setCurrentPercentage(eval(`(${patrimonyHere} * 100) / ${patrimony}`).toFixed(2) + '');
-  }, [cash, patrimonyHere, amount]);
+  useEffect(() => {
+    setCurrentPercentage(eval(`(${patrimonyHere} * 100 ) / ${patrimony}`).toFixed(2) + '');
+  }, [patrimony]);
 
   useEffect(() => {
 
-  }, [actives.currentPercentage]);
+  }, [actives]);
 
   const handleActive = () => {
     if (
@@ -146,6 +148,7 @@ const Portfolio = ({ navigation }) => {
             keyboardType="numeric"
 
             editable={false}
+
             value={currentPercentage}
           />
         </View>
@@ -162,9 +165,8 @@ const Portfolio = ({ navigation }) => {
               <View key={index} style={styles.stocksContainer}>
                 <TextInput 
                   style={styles.input}
-                  defaultValue={value.name}
-
-                  onChangeText={(name) => value.name = name}
+                  value={value.name}
+                  editable={false}
                 />
                 <TextInput 
                   style={styles.input}
