@@ -1,6 +1,4 @@
 <h1 align="center">
-<br> 
-<br>
 <br>
 Learning react native
 </h1>
